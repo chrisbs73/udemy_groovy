@@ -1,18 +1,18 @@
 @groovy.transform.ToString
 class Account {
 
-    BigDecimal balance = 0.0
-    String type // checking or savings
+    def balance = 0.0
+    def type // checking or savings
     
-    BigDecimal deposit(amount) {
+    def deposit(amount) {
         balance += amount
     }
 
-    BigDecimal withdrawal(amount) {
+    def withdrawal(amount) {
         balance -= amount
     }
     
-    BigDecimal plus(Account account) {
+    def plus(Account account) {
         this.balance + account.balance
     }
 
